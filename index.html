@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Gratis para Electricistas</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    .font-poppins { font-family: 'Poppins', sans-serif; }
+    .highlight { color: #FFD60A; }
+    .btn-pulse { animation: pulse-glow 2s ease-in-out infinite; }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,214,10,0.4); }
+      50% { box-shadow: 0 0 20px 6px rgba(255,214,10,0.15); }
+    }
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fade-up 0.6s ease-out both; }
+    .fade-up-d1 { animation-delay: 0.1s; }
+    .fade-up-d2 { animation-delay: 0.25s; }
+    .fade-up-d3 { animation-delay: 0.4s; }
+    .fade-up-d4 { animation-delay: 0.55s; }
+    .fade-up-d5 { animation-delay: 0.7s; }
+    .noise-bg {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+    input:focus { outline: none; box-shadow: 0 0 0 2px #FFD60A; }
+    .toast-enter { animation: toast-slide 0.4s ease-out; }
+    @keyframes toast-slide {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body class="h-full font-poppins" style="background-color: #0A2540; color: #FFFFFF;">
+  <div id="app-wrapper" class="h-full w-full overflow-auto noise-bg"><!-- Toast notification -->
+   <div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden"></div>
+   <div class="max-w-xl mx-auto px-5 py-12 sm:py-16"><!-- Bolt icon -->
+  
+ <!-- Imagen superior -->
+<div class="flex justify-center mb-6">
+  <img 
+    src="https://i.postimg.cc/nV42sfDb/Diseno-sin-titulo-(2).png" 
+    alt="Negocio Eléctrico Eduardo Pellegrini"
+    class="w-40 sm:w-52 md:w-60 h-auto"
+  >
+</div>
+ 
+<!-- Headline -->
+    <h1 id="el-headline" class="fade-up fade-up-d1 font-montserrat text-3xl sm:text-4xl md:text-5xl font-black text-center leading-tight mb-5">¿Querés conseguir más trabajos <span class="highlight">como electricista?</span>?</h1><!-- Subheadline -->
+    
+<p id="el-subheadline" class="fade-up fade-up-d2 text-center text-base sm:text-lg mb-10 leading-relaxed" style="color: rgba(255,255,255,0.7);">
+No es el cliente. Es que no estás usando las <strong style="color:#fff;">herramientas correctas</strong> para organizarte, presupuestar y <strong style="color:#fff;">conseguir más trabajos</strong>.
+
+</p><!-- Offer card -->    
+<div class="fade-up fade-up-d3 rounded-2xl p-6 sm:p-8 mb-8" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+     <div class="flex items-start gap-3 mb-5"><i data-lucide="file-text" style="color: #FFD60A; width: 22px; height: 22px; flex-shrink:0; margin-top:2px;"></i>
+      <p id="el-offer" class="text-sm sm:text-base leading-relaxed" style="color: rgba(255,255,255,0.85);">Descargá gratis el PDF donde te explico los <strong class="highlight">5 errores más comunes</strong> y cómo solucionarlos para conseguir más clientes y cerrar trabajos.</p>
+     </div><!-- Benefits -->
+     <ul class="space-y-3 ml-1">
+      <li class="flex items-center gap-3"><i data-lucide="check-circle" style="color: #FFD60A; width: 18px; height: 18px; flex-shrink:0;"></i> <span id="el-b1" class="text-sm" style="color: rgba(255,255,255,0.8);">Entendé por qué no te responden</span></li>
+      <li class="flex items-center gap-3"><i data-lucide="check-circle" style="color: #FFD60A; width: 18px; height: 18px; flex-shrink:0;"></i> <span id="el-b2" class="text-sm" style="color: rgba(255,255,255,0.8);">Aprendé a comunicar mejor tu servicio</span></li>
+      <li class="flex items-center gap-3"><i data-lucide="check-circle" style="color: #FFD60A; width: 18px; height: 18px; flex-shrink:0;"></i> <span id="el-b3" class="text-sm" style="color: rgba(255,255,255,0.8);">Empezá a cerrar más trabajos</span></li>
+     </ul>
+    </div><!-- Form -->
+    <form id="lead-form" class="fade-up fade-up-d4 space-y-4 mb-8">
+       <div><label for="nombre" class="block text-xs font-medium mb-1.5 tracking-wide uppercase" style="color: rgba(255,255,255,0.5);">Nombre *</label> <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="w-full rounded-lg px-4 py-3 text-sm font-poppins transition-all" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #fff;">
+     </div>
+     <div><label for="email" class="block text-xs font-medium mb-1.5 tracking-wide uppercase" style="color: rgba(255,255,255,0.5);">Email *</label> <input type="email" id="email" name="email" required placeholder="tu@email.com" class="w-full rounded-lg px-4 py-3 text-sm font-poppins transition-all" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #fff;">
+     </div>
+     <div><label for="whatsapp" class="block text-xs font-medium mb-1.5 tracking-wide uppercase" style="color: rgba(255,255,255,0.5);">WhatsApp <span style="color: rgba(255,255,255,0.3);">(opcional)</span></label> <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 11 1234-5678" class="w-full rounded-lg px-4 py-3 text-sm font-poppins transition-all" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #fff;">
+     </div><button id="cta-btn" type="submit" class="btn-pulse w-full rounded-lg px-6 py-4 text-base font-semibold font-montserrat tracking-wide transition-all hover:brightness-110 cursor-pointer flex items-center justify-center gap-2 mt-2" style="background: #FFD60A; color: #111111;"> <span id="cta-btn-text">👉 QUIERO ACCEDER GRATIS</span> <span id="cta-spinner" class="hidden">
+       <svg class="animate-spin h-5 w-5" viewbox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" /><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+       </svg></span> </button>
+    
+<div style="margin-top:15px; font-size:14px; opacity:0.8; text-align:center;">
+Incluye herramientas como:
+<br>• 𝄜 Planilla de presupuestos (Excel)
+<br>• 📕Guías prácticas (PDF)
+<br>• 🛠Recursos para conseguir clientes
+</div>
+
+</form>
+
+<div style="margin-top:20px; text-align:center;">
+  <a href="https://instagram.com/negocielectricoedupellegrini/" target="_blank" style="display:inline-block; margin:5px; padding:10px 15px; background:#000; color:#fff; text-decoration:none;">
+    Instagram
+  </a>
+
+  <a href="https://facebook.com/profile.php?id=61576489353651" target="_blank" style="display:inline-block; margin:5px; padding:10px 15px; background:#000; color:#fff; text-decoration:none;">
+    Facebook
+  </a>
+
+  <a href="https://tiktok.com/@negocioelctricoedupelle" target="_blank" style="display:inline-block; margin:5px; padding:10px 15px; background:#000; color:#fff; text-decoration:none;">
+    TikTok
+  </a>
+
+  <a href="https://youtube.com/@NegocioElectricoEduPellegrini" target="_blank" style="display:inline-block; margin:5px; padding:10px 15px; background:#000; color:#fff; text-decoration:none;">
+    YouTube
+  </a>
+
+  <a href="https://wa.me/5492634677482" target="_blank" style="display:inline-block; margin:5px; padding:10px 15px; background:#25D366; color:#fff; text-decoration:none;">
+    WhatsApp
+  </a>
+</div>
+
+<!-- Trust -->
+    <div class="fade-up fade-up-d5 flex items-start gap-3 justify-center text-center px-4"><i data-lucide="shield-check" style="color: #FFD60A; width: 18px; height: 18px; flex-shrink:0; margin-top:2px;"></i>
+     <p id="el-trust" class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.45);">Contenido creado por electricista con experiencia real en el rubro (no marketing teórico)</p>
+    </div><!-- Success state (hidden) -->
+    <div id="success-state" class="hidden text-center py-12">
+     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style="background: rgba(255,214,10,0.15);"><i data-lucide="check" style="color: #FFD60A; width: 32px; height: 32px;"></i>
+     </div>
+     <h2 class="font-montserrat text-2xl font-bold mb-3">¡Listo! 🎉</h2>
+     <p style="color: rgba(255,255,255,0.7);">Revisá tu email, el PDF está en camino.</p>
+    </div>
+   </div>
+  </div>
+  <script>
+  const defaultConfig = {
+    background_color: '#0A2540',
+    accent_color: '#FFD60A',
+    text_color: '#FFFFFF',
+    surface_color: 'rgba(255,255,255,0.05)',
+    button_text_color: '#111111',
+    font_family: 'Montserrat',
+    font_size: 16,
+    headline: '¿Mandás presupuestos y no te responden?',
+    subheadline: 'No es el cliente. Estás cometiendo errores que te hacen perder trabajos sin darte cuenta.',
+    offer_text: 'Descargá gratis el PDF donde te explico los 3 errores más comunes y cómo solucionarlos para conseguir más clientes y cerrar trabajos.',
+    cta_text: '👉 QUIERO EL PDF GRATIS',
+    trust_text: 'Contenido creado por electricista con experiencia real en el rubro (no marketing teórico)',
+    benefit_1: 'Entendé por qué no te responden',
+    benefit_2: 'Aprendé a comunicar mejor tu servicio',
+    benefit_3: 'Empezá a cerrar más trabajos'
+  };
+
+  let currentData = [];
+
+  function showToast(msg, isError) {
+    const t = document.getElementById('toast');
+    t.className = 'fixed top-4 left-1/2 -translate-x-1/2 z-50 toast-enter px-5 py-3 rounded-lg text-sm font-medium shadow-lg';
+    t.style.background = isError ? '#dc2626' : '#16a34a';
+    t.style.color = '#fff';
+    t.textContent = msg;
+    setTimeout(() => { t.className = 'fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden'; }, 3500);
+  }
+
+  // Data SDK
+  const dataHandler = { onDataChanged(data) { currentData = data; } };
+
+  (async () => {
+    const r = await window.dataSdk.init(dataHandler);
+    if (!r.isOk) console.error('Data SDK init failed');
+  })();
+
+
+
+  // Element SDK
+  function applyConfig(config) {
+    const c = { ...defaultConfig, ...config };
+    const bg = c.background_color;
+    const accent = c.accent_color;
+    const txt = c.text_color;
+
+    document.body.style.backgroundColor = bg;
+    document.body.style.color = txt;
+
+    // Headline
+    const hl = document.getElementById('el-headline');
+    hl.innerHTML = c.headline.replace(/(no te responden|$)/, `<span style="color:${accent}">$1</span>`);
+    hl.style.fontFamily = `${c.font_family}, Montserrat, sans-serif`;
+    hl.style.fontSize = `${c.font_size * 2.2}px`;
+
+    // Sub
+    const sh = document.getElementById('el-subheadline');
+    sh.textContent = c.subheadline;
+    sh.style.fontFamily = `${c.font_family}, Poppins, sans-serif`;
+    sh.style.fontSize = `${c.font_size}px`;
+
+    // Offer
+    document.getElementById('el-offer').textContent = c.offer_text;
+
+    // Benefits
+    document.getElementById('el-b1').textContent = c.benefit_1;
+    document.getElementById('el-b2').textContent = c.benefit_2;
+    document.getElementById('el-b3').textContent = c.benefit_3;
+
+    // CTA
+    const ctaBtn = document.getElementById('cta-btn');
+    ctaBtn.style.background = accent;
+    ctaBtn.style.color = c.button_text_color;
+    document.getElementById('cta-btn-text').textContent = c.cta_text;
+
+    // Trust
+    document.getElementById('el-trust').textContent = c.trust_text;
+
+    // Accent icons
+    document.querySelectorAll('[data-lucide]').forEach(el => {
+      if (el.closest('#success-state') || el.closest('.fade-up:first-child') || el.closest('.fade-up-d5') || el.closest('.fade-up-d3')) {
+        // Re-color will happen via Lucide re-render
+      }
+    });
+  }
+
+  function makeRecolorable(key) {
+    return {
+      get: () => (window.elementSdk.config && window.elementSdk.config[key]) || defaultConfig[key],
+      set: (v) => { window.elementSdk.setConfig({ [key]: v }); }
+    };
+  }
+
+  window.elementSdk.init({
+    defaultConfig,
+    onConfigChange: async (config) => { applyConfig(config); },
+    mapToCapabilities: (config) => ({
+      recolorables: [
+        makeRecolorable('background_color'),
+        makeRecolorable('surface_color'),
+        makeRecolorable('text_color'),
+        makeRecolorable('accent_color'),
+        makeRecolorable('button_text_color')
+      ],
+      borderables: [],
+      fontEditable: {
+        get: () => (config && config.font_family) || defaultConfig.font_family,
+        set: (v) => { window.elementSdk.setConfig({ font_family: v }); }
+      },
+      fontSizeable: {
+        get: () => (config && config.font_size) || defaultConfig.font_size,
+        set: (v) => { window.elementSdk.setConfig({ font_size: v }); }
+      }
+    }),
+    mapToEditPanelValues: (config) => new Map([
+      ['headline', (config && config.headline) || defaultConfig.headline],
+      ['subheadline', (config && config.subheadline) || defaultConfig.subheadline],
+      ['offer_text', (config && config.offer_text) || defaultConfig.offer_text],
+      ['cta_text', (config && config.cta_text) || defaultConfig.cta_text],
+      ['trust_text', (config && config.trust_text) || defaultConfig.trust_text],
+      ['benefit_1', (config && config.benefit_1) || defaultConfig.benefit_1],
+      ['benefit_2', (config && config.benefit_2) || defaultConfig.benefit_2],
+      ['benefit_3', (config && config.benefit_3) || defaultConfig.benefit_3]
+    ])
+  });
+
+  lucide.createIcons();
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e9a5b0a22761fe4',t:'MTc3NTc0NjU1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>
+document.getElementById("lead-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = {
+    nombre: document.getElementById("nombre").value,
+    email: document.getElementById("email").value,
+    whatsapp: document.getElementById("whatsapp").value
+  };
+fetch("https://script.google.com/macros/s/AKfycbzoaeH8C4oK7I1Grr5UlkfehYeRxCXZyl0EiN_uGTDtsgs3-W5CPQ4iOT1jKoBrVuts/exec", {
+  method: "POST",
+  mode: "no-cors",
+  body: JSON.stringify(data)
+})
+  .then(() => {
+    window.location.href = "https://drive.google.com/drive/folders/1kLlVZzuh7NgZGD2KSfPlwnMxmTipthcZ?usp=drive_link";
+  })
+  .catch(() => {
+    alert("Error, intentá de nuevo");
+  });
+});
+</script></body>
+
+</html>
