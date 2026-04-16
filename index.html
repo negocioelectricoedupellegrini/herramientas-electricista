@@ -128,10 +128,17 @@ whatsapp: document.getElementById("whatsapp").value
 // spinner
 document.getElementById("cta-spinner").classList.remove("hidden");
 
-// redirección corregida
+// GUARDAR EN GOOGLE SHEETS (TU SCRIPT)
+fetch("https://script.google.com/macros/s/AKfycbyTqj7E5tF-wxREyQ_mpiTI7sXbqjW8kZXiMO3OWblf2fSyUVa1AYXRsEwvHEqQVJ3c/exec", {
+method: "POST",
+mode: "no-cors",
+body: JSON.stringify(data)
+});
+
+// REDIRECCIÓN
 setTimeout(()=>{
-window.location.href="https://docs.google.com/spreadsheets/d/1GF_tFXqpvrFzCUX8f46FdUn68_NHn-FI/view";
-},300);
+window.location.href="https://docs.google.com/spreadsheets/d/1Zr5Yz6pW3cVXn1X-El6GWHyBUKVZCrwxQB906KMZ2lY/view";
+},800);
 
 });
 </script>
