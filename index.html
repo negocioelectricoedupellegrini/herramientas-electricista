@@ -34,23 +34,23 @@ style="border-radius:50%; width:160px; height:160px; object-fit:cover;">
 </div>
 
 <!-- HEADLINE -->
-<h1 id="el-headline" class="text-4xl font-bold text-center mb-5">
+<h1 class="text-4xl font-bold text-center mb-5">
 ¿Querés conseguir más trabajos <span class="highlight">como electricista</span>?
 </h1>
 
-<p id="el-subheadline" class="text-center mb-8" style="opacity:.7;">
+<p class="text-center mb-8 opacity-70">
 No es el cliente. Es que no estás usando las <strong>herramientas correctas</strong> para organizarte, presupuestar y conseguir más trabajos.
 </p>
 
 <!-- OFERTA -->
-<div class="p-6 mb-6" style="background:rgba(255,255,255,0.05); border-radius:15px;">
-<p id="el-offer">
+<div class="p-6 mb-6 rounded-xl bg-white/5 border border-white/10">
+<p>
 Accedé gratis a <strong class="highlight">herramientas prácticas</strong> que uso en el día a día para trabajar mejor, <strong class="highlight">organizar mis trabajos</strong> y <strong class="highlight">no perder plata</strong>.
 </p>
 </div>
 
 <!-- HERRAMIENTAS -->
-<div style="text-align:center; margin-bottom:20px; opacity:.8;">
+<div class="text-center mb-6 opacity-80">
 Incluye herramientas como:<br>
 • Excel de presupuestos<br>
 • Guías PDF<br>
@@ -58,51 +58,56 @@ Incluye herramientas como:<br>
 </div>
 
 <!-- FORM -->
-<form id="lead-form">
+<form id="lead-form" class="space-y-3">
 
-<input id="nombre" placeholder="Nombre" required class="w-full mb-2 p-3 rounded">
-<input id="email" placeholder="Email" required class="w-full mb-2 p-3 rounded">
-<input id="whatsapp" placeholder="WhatsApp (opcional)" class="w-full mb-4 p-3 rounded">
+<input id="nombre" placeholder="Nombre" required
+class="w-full p-3 rounded bg-[#1a2e45] text-white border border-gray-600 placeholder:text-gray-400">
 
-<button id="cta-btn" class="btn-pulse w-full p-4 rounded bg-yellow-400 text-black">
+<input id="email" placeholder="Email" required
+class="w-full p-3 rounded bg-[#1a2e45] text-white border border-gray-600 placeholder:text-gray-400">
+
+<input id="whatsapp" placeholder="WhatsApp (opcional)"
+class="w-full p-3 rounded bg-[#1a2e45] text-white border border-gray-600 placeholder:text-gray-400">
+
+<button id="cta-btn" class="btn-pulse w-full p-4 rounded bg-yellow-400 text-black flex justify-center items-center gap-2">
 👉 QUIERO ACCEDER GRATIS
 <span id="cta-spinner" class="hidden">⏳</span>
 </button>
 
-<p style="font-size:12px; text-align:center; margin-top:8px; opacity:.6;">
+<p class="text-xs text-center opacity-60">
 Acceso inmediato • Disponible por tiempo limitado
 </p>
 
 </form>
 
-<!-- REDES + TRUST -->
-<div style="text-align:center; margin-top:20px;">
+<!-- REDES -->
+<div class="text-center mt-6">
 
-<div style="display:flex; justify-content:center; gap:12px; margin-bottom:10px;">
+<div class="flex justify-center gap-4 mb-3">
 
-  <a href="https://instagram.com/negocielectricoedupellegrini/" target="_blank">
-    <img src="https://cdn.simpleicons.org/instagram/ffffff" width="24">
-  </a>
+<a href="https://instagram.com/negocielectricoedupellegrini/" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.simpleicons.org/instagram/ffffff" width="24">
+</a>
 
-  <a href="https://facebook.com/profile.php?id=61576489353651" target="_blank">
-    <img src="https://cdn.simpleicons.org/facebook/ffffff" width="24">
-  </a>
+<a href="https://facebook.com/profile.php?id=61576489353651" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.simpleicons.org/facebook/ffffff" width="24">
+</a>
 
-  <a href="https://tiktok.com/@negocioelctricoedupelle" target="_blank">
-    <img src="https://cdn.simpleicons.org/tiktok/ffffff" width="24">
-  </a>
+<a href="https://tiktok.com/@negocioelctricoedupelle" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.simpleicons.org/tiktok/ffffff" width="24">
+</a>
 
-  <a href="https://youtube.com/@NegocioElectricoEduPellegrini" target="_blank">
-    <img src="https://cdn.simpleicons.org/youtube/ffffff" width="24">
-  </a>
+<a href="https://youtube.com/@NegocioElectricoEduPellegrini" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.simpleicons.org/youtube/ffffff" width="24">
+</a>
 
-  <a href="https://wa.me/5492634677482" target="_blank">
-    <img src="https://cdn.simpleicons.org/whatsapp/25D366" width="24">
-  </a>
+<a href="https://wa.me/5492634677482" target="_blank" rel="noopener noreferrer">
+<img src="https://cdn.simpleicons.org/whatsapp/25D366" width="24">
+</a>
 
 </div>
 
-<p id="el-trust" style="font-size:12px; opacity:.6;">
+<p class="text-xs opacity-60">
 Contenido creado por electricista con experiencia real en el rubro
 </p>
 
@@ -115,9 +120,9 @@ document.getElementById("lead-form").addEventListener("submit", function(e){
 e.preventDefault();
 
 const data = {
-nombre: nombre.value,
-email: email.value,
-whatsapp: whatsapp.value
+nombre: document.getElementById("nombre").value,
+email: document.getElementById("email").value,
+whatsapp: document.getElementById("whatsapp").value
 };
 
 // spinner
@@ -125,7 +130,7 @@ document.getElementById("cta-spinner").classList.remove("hidden");
 
 // redirección rápida
 setTimeout(()=>{
-window.location.href="https://docs.google.com/spreadsheets/d/1--b6UtFAL7z1KTaxJyVRPebEzmIRfIvt/edit?usp=sharing&ouid=103769766026839742625&rtpof=true&sd=true";
+window.location.href="https://docs.google.com/spreadsheets/d/1--b6UtFAL7z1KTaxJyVRPebEzmIRfIvt/view";
 },300);
 
 // guardar datos
