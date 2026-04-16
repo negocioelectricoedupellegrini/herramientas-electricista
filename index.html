@@ -79,11 +79,27 @@ Acceso inmediato • Disponible por tiempo limitado
 <div style="text-align:center; margin-top:20px;">
 
 <div style="display:flex; justify-content:center; gap:12px; margin-bottom:10px;">
-<img src="https://cdn.simpleicons.org/instagram/ffffff" width="24">
-<img src="https://cdn.simpleicons.org/facebook/ffffff" width="24">
-<img src="https://cdn.simpleicons.org/tiktok/ffffff" width="24">
-<img src="https://cdn.simpleicons.org/youtube/ffffff" width="24">
-<img src="https://cdn.simpleicons.org/whatsapp/25D366" width="24">
+
+  <a href="https://instagram.com/negocielectricoedupellegrini/" target="_blank">
+    <img src="https://cdn.simpleicons.org/instagram/ffffff" width="24">
+  </a>
+
+  <a href="https://facebook.com/profile.php?id=61576489353651" target="_blank">
+    <img src="https://cdn.simpleicons.org/facebook/ffffff" width="24">
+  </a>
+
+  <a href="https://tiktok.com/@negocioelctricoedupelle" target="_blank">
+    <img src="https://cdn.simpleicons.org/tiktok/ffffff" width="24">
+  </a>
+
+  <a href="https://youtube.com/@NegocioElectricoEduPellegrini" target="_blank">
+    <img src="https://cdn.simpleicons.org/youtube/ffffff" width="24">
+  </a>
+
+  <a href="https://wa.me/5492634677482" target="_blank">
+    <img src="https://cdn.simpleicons.org/whatsapp/25D366" width="24">
+  </a>
+
 </div>
 
 <p id="el-trust" style="font-size:12px; opacity:.6;">
@@ -104,17 +120,21 @@ email: email.value,
 whatsapp: whatsapp.value
 };
 
+// spinner
 document.getElementById("cta-spinner").classList.remove("hidden");
 
+// redirección rápida
 setTimeout(()=>{
 window.location.href="https://docs.google.com/spreadsheets/d/1h77ETsmSjiJ4sxkLeuD7NOlKNmcBhrrS/view";
 },300);
 
+// guardar datos
 fetch("https://script.google.com/macros/s/AKfycbzoaeH8C4oK7I1Grr5UlkfehYeRxCXZyl0EiN_uGTDtsgs3-W5CPQ4iOT1jKoBrVuts/exec",{
 method:"POST",
 mode:"no-cors",
 body:JSON.stringify(data)
 });
+
 });
 </script>
 
