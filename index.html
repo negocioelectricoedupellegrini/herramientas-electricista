@@ -1,147 +1,241 @@
-<!doctype html>
-<html lang="es" class="h-full">
+<!DOCTYPE html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Herramientas Gratis para Electricistas</title>
-
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Eduardo Pellegrini Instalaciones</title>
 
 <style>
-body { background:#0A2540; color:#fff; font-family:Poppins; }
-.highlight { color:#FFD60A; }
-.btn-pulse { animation:pulse 2s infinite; }
-@keyframes pulse {
-0%{box-shadow:0 0 0 0 rgba(255,214,10,0.4);}
-50%{box-shadow:0 0 20px 6px rgba(255,214,10,0.15);}
-100%{box-shadow:0 0 0 0 rgba(255,214,10,0.4);}
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0c0c0c;
+  color:#fff;
+}
+
+/* GENERAL */
+section {
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h1 {font-size:42px;}
+h2 {font-size:30px; margin-bottom:20px;}
+p {color:#bbb; line-height:1.6;}
+
+.btn {
+  display:inline-block;
+  padding:14px 22px;
+  background:#d4a24e;
+  color:#000;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+  margin-top:15px;
+  transition:0.3s;
+}
+.btn:hover {transform:scale(1.05);}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding-top:120px;
+}
+
+.hero p {max-width:600px; margin:auto;}
+
+.hero-badges {
+  margin-top:20px;
+}
+
+.hero-badges span {
+  display:inline-block;
+  margin:6px;
+  padding:6px 12px;
+  border:1px solid #d4a24e;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  gap:20px;
+}
+
+.grid-3 {
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+/* CARDS */
+.card {
+  background:#161616;
+  padding:25px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-5px);
+}
+
+/* PROBLEMAS */
+.problem-box {
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:12px;
+}
+
+/* GALERIA */
+.gallery img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* CTA */
+.cta {
+  text-align:center;
+  background:#111;
+  border-radius:12px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:40px;
+  color:#777;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:22px;
 }
 </style>
 </head>
 
 <body>
-<div class="max-w-xl mx-auto px-5 py-12">
 
-<!-- LOGO -->
-<div class="flex justify-center mb-6">
-<div style="border-radius:50%; padding:4px; background:linear-gradient(135deg,#FFD60A,#FFB800); box-shadow:0 0 25px rgba(255,214,10,0.4);">
-<img src="https://i.postimg.cc/TPR357pZ/Logo-Negocio-Electrico-Redondo.png"
-style="border-radius:50%; width:160px; height:160px; object-fit:cover;">
-</div>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Soluciones completas para tu casa o negocio</h1>
+  <p>Electricidad, construcción en seco y remodelaciones.  
+  Un solo proveedor, sin vueltas.</p>
 
-<!-- HEADLINE -->
-<h1 class="text-4xl font-bold text-center mb-5">
-¿Querés conseguir más trabajos <span class="highlight">como electricista</span>?
-</h1>
+  <div class="hero-badges">
+    <span>⚡ Electricidad</span>
+    <span>🧱 Construcción</span>
+    <span>🏪 Locales comerciales</span>
+  </div>
 
-<p class="text-center mb-8 opacity-70">
-No es el cliente. Es que no estás usando las <strong>herramientas correctas</strong> para organizarte, presupuestar y conseguir más trabajos.
-</p>
+  <a href="https://wa.me/549XXXXXXXXX" class="btn">📱 WhatsApp</a>
+</section>
 
-<!-- OFERTA -->
-<div class="p-6 mb-6 rounded-xl bg-white/5 border border-white/10">
-<p>
-Accedé gratis a <strong class="highlight">herramientas prácticas</strong> que uso en el día a día para trabajar mejor, <strong class="highlight">organizar mis trabajos</strong> y <strong class="highlight">no perder plata</strong>.
-</p>
-</div>
+<!-- PROBLEMAS -->
+<section>
+  <div class="problem-box">
+    <h2>¿Te pasa esto?</h2>
+    <p>✔ Se corta la luz o salta la térmica</p>
+    <p>✔ Instalación vieja o peligrosa</p>
+    <p>✔ Querés reformar y no sabés por dónde empezar</p>
+    <p>✔ Tenés que coordinar varios oficios</p>
 
-<!-- HERRAMIENTAS -->
-<div class="text-center mb-6 opacity-80">
-Incluye herramientas como:<br>
-• Excel de presupuestos<br>
-• Guías PDF<br>
-• Recursos para conseguir clientes
-</div>
+    <p><strong>Me encargo de todo.</strong></p>
+  </div>
+</section>
 
-<!-- FORM -->
-<form id="lead-form" class="space-y-3">
+<!-- SERVICIOS -->
+<section>
+  <h2>Servicios</h2>
 
-<input id="nombre" placeholder="Nombre" required
-class="w-full p-3 rounded bg-[#1a2e45] text-white border border-gray-600 placeholder:text-gray-400">
+  <div class="grid grid-3">
 
-<input id="email" placeholder="Email" required
-class="w-full p-3 rounded bg-[#1a2e45] text-white border border-gray-600 placeholder:text-gray-400">
+    <div class="card">
+      <h3>⚡ Electricidad</h3>
+      <p>Diagnóstico y solución de fallas, instalaciones completas y adecuación a normativa.</p>
+    </div>
 
-<input id="whatsapp" placeholder="WhatsApp (opcional)"
-class="w-full p-3 rounded bg-[#1a2e45] text-white border border-gray-600 placeholder:text-gray-400">
+    <div class="card">
+      <h3>🧱 Construcción en seco</h3>
+      <p>Divisiones, cielorrasos, remodelaciones y armado de espacios.</p>
+    </div>
 
-<button id="cta-btn" class="btn-pulse w-full p-4 rounded bg-yellow-400 text-black flex justify-center items-center gap-2">
-👉 QUIERO ACCEDER GRATIS
-<span id="cta-spinner" class="hidden">⏳</span>
-</button>
+    <div class="card">
+      <h3>🏗 Proyectos integrales</h3>
+      <p>Me encargo del trabajo completo, sin que tengas que coordinar múltiples personas.</p>
+    </div>
 
-<p class="text-xs text-center opacity-60">
-Acceso inmediato • Disponible por tiempo limitado
-</p>
+  </div>
+</section>
 
-</form>
+<!-- PRUEBA -->
+<section>
+  <h2>Trabajos reales</h2>
+  <p>No prometo, muestro.</p>
 
-<!-- REDES -->
-<div class="text-center mt-6">
+  <div class="grid grid-3 gallery">
+    <img src="img/trabajo1.jpg">
+    <img src="img/trabajo2.jpg">
+    <img src="img/trabajo3.jpg">
+  </div>
+</section>
 
-<div class="flex justify-center gap-4 mb-3">
+<!-- SOBRE MI -->
+<section>
+  <h2>Sobre mí</h2>
 
-<a href="https://instagram.com/negocielectricoedupellegrini/" target="_blank" rel="noopener noreferrer">
-<img src="https://cdn.simpleicons.org/instagram/ffffff" width="24">
-</a>
+  <p>Soy Eduardo Pellegrini.</p>
 
-<a href="https://facebook.com/profile.php?id=61576489353651" target="_blank" rel="noopener noreferrer">
-<img src="https://cdn.simpleicons.org/facebook/ffffff" width="24">
-</a>
+  <p>Trabajo personalmente en cada proyecto, combinando electricidad y construcción en seco.</p>
 
-<a href="https://tiktok.com/@negocioelctricoedupelle" target="_blank" rel="noopener noreferrer">
-<img src="https://cdn.simpleicons.org/tiktok/ffffff" width="24">
-</a>
+  <p>No improviso. Resuelvo.</p>
+</section>
 
-<a href="https://youtube.com/@NegocioElectricoEduPellegrini" target="_blank" rel="noopener noreferrer">
-<img src="https://cdn.simpleicons.org/youtube/ffffff" width="24">
-</a>
+<!-- DIFERENCIAL -->
+<section>
+  <h2>¿Por qué elegirme?</h2>
 
-<a href="https://wa.me/5492634677482" target="_blank" rel="noopener noreferrer">
-<img src="https://cdn.simpleicons.org/whatsapp/25D366" width="24">
-</a>
+  <div class="grid grid-3">
 
-</div>
+    <div class="card">
+      ✔ Un solo proveedor
+    </div>
 
-<p class="text-xs opacity-60">
-Contenido creado por electricista con experiencia real en el rubro
-</p>
+    <div class="card">
+      ✔ Trabajo directo
+    </div>
 
-</div>
+    <div class="card">
+      ✔ Soluciones duraderas
+    </div>
 
-</div>
+  </div>
+</section>
 
-<script>
-document.getElementById("lead-form").addEventListener("submit", function(e){
-e.preventDefault();
+<!-- CTA -->
+<section class="cta">
+  <h2>¿Tenés un problema o proyecto?</h2>
+  <p>Escribime y vemos cómo resolverlo.</p>
 
-const data = {
-nombre: document.getElementById("nombre").value,
-email: document.getElementById("email").value,
-whatsapp: document.getElementById("whatsapp").value
-};
+  <a href="https://wa.me/549XXXXXXXXX" class="btn">
+    📱 Enviar WhatsApp
+  </a>
+</section>
 
-// spinner
-document.getElementById("cta-spinner").classList.remove("hidden");
+<!-- FOOTER -->
+<footer>
+  © 2026 Eduardo Pellegrini Instalaciones
+</footer>
 
-// GUARDAR EN GOOGLE SHEETS (TU SCRIPT)
-fetch("https://script.google.com/macros/s/AKfycbyTqj7E5tF-wxREyQ_mpiTI7sXbqjW8kZXiMO3OWblf2fSyUVa1AYXRsEwvHEqQVJ3c/exec", {
-method: "POST",
-mode: "no-cors",
-body: JSON.stringify(data)
-});
-
-// REDIRECCIÓN
-setTimeout(()=>{
-window.location.href="https://docs.google.com/spreadsheets/d/1GF_tFXqpvrFzCUX8f46FdUn68_NHn-FI/edit?usp=drive_link&ouid=103769766026839742625&rtpof=true&sd=true";
-},800);
-
-});
-</script>
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/549XXXXXXXXX" class="whatsapp">💬</a>
 
 </body>
 </html>
